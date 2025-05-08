@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\CarrosController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\InsertcarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('intro');
+    return view('home');
 });
 
+Route::get('/catalogo', function () {
+    return view('catalogo');
+});
+
+
+
+Route::get('/catalogo', [CarrosController::class, 'catalogo']);
+
+
+Route::get('/insertcar/create', [InsertcarController::class, 'create']);
+Route::post('/insertcar', [InsertcarController::class, 'store']);
