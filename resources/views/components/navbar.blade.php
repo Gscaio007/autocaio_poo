@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('assets/img/navbar-logo.svg') }}" style="width: 8rem;height: 3.5rem;" alt="Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">

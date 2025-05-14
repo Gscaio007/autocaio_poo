@@ -24,7 +24,7 @@ Route::get('/catalogo', function () {
 
 
 
-Route::get('/catalogo', [CarrosController::class, 'catalogo']);
+Route::get('/catalogo', [CarrosController::class, 'catalogo'])->name('catalogo');
 
 
 Route::get('/insertcar/create', [InsertcarController::class, 'create']);
