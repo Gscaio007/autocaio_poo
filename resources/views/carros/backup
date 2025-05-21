@@ -1,0 +1,15 @@
+    @foreach ($modelos as $modelo)
+    
+
+
+        <div class="card" style="width: 18rem;">
+          <!--img src="{{ asset('assets/img/carros/' . $modelo->marca . '/' . $modelo->modelo . '/' . $modelo->cor1) }}" class="card-img-top" alt="..."-->
+          <img src="{{ asset($modelo->cor1) }}" alt="Imagem do carro" class="img-fluid">
+          <div class="card-body">
+            <h5 class="card-title">{{ $modelo->marca }}  {{ $modelo->modelo }}</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Selecionar</a>
+          </div>
+        </div>
+
+    @endforeach

@@ -28,4 +28,6 @@ Route::get('/catalogo', [CarrosController::class, 'catalogo'])->name('catalogo')
 
 
 Route::get('/insertcar/create', [InsertcarController::class, 'create']);
-Route::post('/insertcar', [InsertcarController::class, 'store']);
+//Route::post('/insertcar', [InsertcarController::class, 'store']);
+
+Route::post('/insertcar', [InsertcarController::class, 'store'])->name('carros.store');

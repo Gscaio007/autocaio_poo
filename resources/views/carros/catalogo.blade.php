@@ -44,22 +44,26 @@
 
 
 
-    @foreach ($modelos as $modelo)
-    
 
-
-        <div class="card" style="width: 18rem;">
-          <img src="{{ asset('assets/img/carros/' . $modelo->marca . '/' . $modelo->modelo . '/' . $modelo->cor1) }}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ $modelo->marca }}  {{ $modelo->modelo }}</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Selecionar</a>
-          </div>
-        </div>
-
-    @endforeach
-  </ul>
-
+    <div class="row">
+        @forelse ($modelos as $modelo)
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100">
+                    @if($modelo->cor1)
+                        <img src="{{ asset($modelo->cor1) }}" class="card-img-top" alt="{{ $modelo->modelo }}">
+                    @endif
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ $modelo->marca }} {{ $modelo->modelo }}</h5>
+                        <p class="card-text">Ano: {{ $modelo->ano }}<br>Preço: R$ {{ number_format($modelo->preco, 2, ',', '.') }}</p>
+                        <a href="#" class="btn btn-warning mt-auto">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+        @empty
+            <p class="text-muted">Nenhum carro encontrado com os filtros aplicados.</p>
+        @endforelse
+    </div>
+     </ul>
 
 @endsection
 

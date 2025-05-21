@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+<nav class="navbar navbar-expand-lg" id="mainNav">
+    <!-- navbar-dark bg-dark -->
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/img/navbar-logo.svg') }}" style="width: 8rem;height: 3.5rem;" alt="Logo" />
+            <img src="{{ asset('assets/img/navbar-logo.svg') }}" style="width: 8rem;height: 4.5rem;" alt="Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             Menu <i class="fas fa-bars ms-1"></i>
